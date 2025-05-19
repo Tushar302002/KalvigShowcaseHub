@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    /* Fonts */
+    --font-bold: 'Montserrat', sans-serif;
+    --font-regular: 'Montserrat', sans-serif;
+  
+    /* Font Weights */
+    --weight-bold: 700;
+    --weight-regular: 400;
+  
+    /* Font Sizes */
+    --font-size-xxl: 48px;
+    --font-size-xl: 36px;
+    --font-size-lg: 32px;
+    --font-size-md: 24px;
+    --font-size-sm: 20px;
+  
+    /* Colors */
+    --color-gradient-start: #19214F;
+    --color-gradient-end: #000000;
+    --color-blue: #2098E3;
+    --color-white: #FFFFFF;
+  }
+
+  
+  body {
+    background: linear-gradient(30deg, var(--color-gradient-start) 0.1%, var(--color-gradient-end) 99.9%);
+    color: var(--color-white);
+  }
+  
