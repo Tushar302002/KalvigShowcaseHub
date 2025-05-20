@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Navbar from "../components/Navbar";
 
 function Home() {
   const [workActiveIndex, setWorkActiveIndex] = useState(0);
@@ -104,7 +103,6 @@ function Home() {
 
   return (
     <div>
-      <Navbar />
       {/* WORK SECTION */}
       <section className="px-6 py-10 text-white">
         {/* Top title + arrows */}

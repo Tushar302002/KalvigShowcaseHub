@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
   }
 
   :root {
@@ -33,7 +34,8 @@
 
   
   body {
-    background: linear-gradient(30deg, var(--color-gradient-start) 0.1%, var(--color-gradient-end) 99.9%);
+    background: linear-gradient(-200deg, var(--color-gradient-start) 1%, var(--color-gradient-end) 99%);
+    background-repeat: no-repeat;
     color: var(--color-white);
   }
   
