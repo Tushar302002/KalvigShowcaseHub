@@ -2,7 +2,9 @@ import React from 'react'
 
 function CaseStudies() {
   return (
-    <div>CaseStudies</div>
+    <div>
+      CaseStudies
+    </div>
   )
 }
 

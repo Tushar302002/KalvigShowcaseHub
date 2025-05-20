@@ -2,7 +2,9 @@ import React from 'react'
 
 function Three3D() {
   return (
-    <div>Three3D</div>
+    <div>
+      Three3D
+    </div>
   )
 }
 
