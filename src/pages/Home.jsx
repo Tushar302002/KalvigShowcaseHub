@@ -11,28 +11,28 @@ function Home() {
       tags: ["3D", "INTERACTIVE"],
       title: "3D Product Demo",
       description: "Interactive 3D demo for new product rollouts",
-      image: "/assets/3D DEMO.jpg",
+      image: "/assets/lipstic.png",
     },
     {
       id: 2,
       tags: ["DESIGN", "UI/UX"],
       title: "8 Responsive UI Kit Updates",
       description: "UI Kit upgrades with mobile-first layouts.",
-      image: "/assets/UI1.svg",
+      image: "/assets/ui1.png",
     },
     {
       id: 3,
       tags: ["DESIGN", "UI/UX"],
       title: "Kayening Web App UI",
       description: "Streamlined interface for Kayening's online platform.",
-      image: "/assets/UI2.svg",
+      image: "/assets/ui2.png",
     },
     {
       id: 4,
       tags: ["DEVELOPMENT", "API"],
       title: "Payment Gateway API",
       description: "Secure payment processing integration",
-      image: "/assets/3DDEMO.svg",
+      image: "/assets/lipstic.png",
     },
   ];
 
@@ -63,7 +63,7 @@ function Home() {
       tags: ["DESIGN", "UI/UX"],
       title: "Payment Gateway API",
       description: "Secure payment processing integration",
-      image: "/assets/3DDEMO.svg",
+      image: "/assets/lipstic.png",
     },
   ];
 
@@ -136,7 +136,7 @@ function Home() {
               <img
                 src={visibleWorkCards[1].image}
                 alt={visibleWorkCards[1].title}
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover opacity-50"
               />
               <div className="relative z-10 flex flex-col justify-end">
                 <div className="flex gap-2 mb-4">
@@ -168,7 +168,7 @@ function Home() {
               <img
                 src={visibleWorkCards[2].image}
                 alt={visibleWorkCards[2].title}
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover opacity-50"
               />
               <div className="relative z-10 flex flex-col justify-end">
                 <div className="flex gap-2 mb-2">
@@ -184,7 +184,7 @@ function Home() {
                 <h3 className="font-bold text-[36px] w-[300px] mt-8">
                   {visibleWorkCards[2].title}
                 </h3>
-                <p className="text-gray-300 text-[32px] w-[379px] mt-[130px]">
+                <p className="text-gray-300 text-[24px] font-normal w-[252px] mt-[130px]">
                   {visibleWorkCards[2].description}
                 </p>
               </div>
@@ -199,7 +199,7 @@ function Home() {
               <img
                 src={visibleWorkCards[0].image}
                 alt={visibleWorkCards[0].title}
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover opacity-50"
               />
               <div className="relative z-10 flex flex-col justify-end">
                 <div className="flex gap-2 mb-2">
@@ -215,7 +215,7 @@ function Home() {
                 <h3 className="font-bold text-[36px] w-[300px] mt-8">
                   {visibleWorkCards[0].title}
                 </h3>
-                <p className="text-gray-300 text-[32px] w-[379px] mt-[130px]">
+                <p className="text-gray-300 text-[24px] font-normal w-[252px] mt-[130px]">
                   {visibleWorkCards[0].description}
                 </p>
               </div>
