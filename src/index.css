@@ -3,39 +3,40 @@
 @tailwind utilities;
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
 
-  :root {
-    /* Fonts */
-    --font-bold: 'Montserrat', sans-serif;
-    --font-regular: 'Montserrat', sans-serif;
-  
-    /* Font Weights */
-    --weight-bold: 700;
-    --weight-regular: 400;
-  
-    /* Font Sizes */
-    --font-size-xxl: 48px;
-    --font-size-xl: 36px;
-    --font-size-lg: 32px;
-    --font-size-md: 24px;
-    --font-size-sm: 20px;
-  
-    /* Colors */
-    --color-gradient-start: #19214F;
-    --color-gradient-end: #000000;
-    --color-blue: #2098E3;
-    --color-white: #FFFFFF;
-  }
+:root {
+  /* Fonts */
+  --font-bold: 'Montserrat', sans-serif;
+  --font-regular: 'Montserrat', sans-serif;
 
-  
-  body {
-    background: linear-gradient(-200deg, var(--color-gradient-start) 1%, var(--color-gradient-end) 99%);
-    background-repeat: no-repeat;
-    color: var(--color-white);
-  }
-  
+  /* Font Weights */
+  --weight-bold: 700;
+  --weight-regular: 400;
+
+  /* Font Sizes */
+  --font-size-xxl: 48px;
+  --font-size-xl: 36px;
+  --font-size-lg: 32px;
+  --font-size-md: 24px;
+  --font-size-sm: 20px;
+
+  /* Colors */
+  --color-gradient-start: #19214F;
+  --color-gradient-end: #000000;
+  --color-blue: #2098E3;
+  --color-white: #FFFFFF;
+}
+
+
+body {
+  background:
+  radial-gradient(circle at 20% 30%, rgba(0, 132, 255, 0.12) 0%, transparent 40%),
+  linear-gradient(to bottom right, #0B1120, #0A0A0A);
+  background-repeat: no-repeat;
+  color: var(--color-white);
+}
