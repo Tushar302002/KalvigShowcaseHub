@@ -25,12 +25,13 @@ function Navbar() {
           <input className='border-none outline-none bg-transparent px-3 text-[16px] w-[250px]' placeholder='Search 3D,Web Design,etc...' />
         </div>
       </div>
-      <h1 style={{ fontSize: "var(--font-size-md)" }}>Curated Portal for Demos: Case Studies & Internal Workflow</h1>
+      <h1 style={{ fontSize: "var(--font-size-xl)" }}>Curated Portal for Demos: Case Studies & Internal Workflow</h1>
       <div className='flex gap-2 mt-2 border-b-[1px] border-white border-opacity-20'>
         {tabs.map((tab) => (
           <Link key={tab.id} to={tab.path}>
             <span
               className={`border-white-500 cursor-pointer px-2 ${activeTab == tab.id ? 'border-b-2 ' : ''}`}
+              style={{ fontSize: "var(--font-size-md)" }}
               onClick={() => handleTabChange(tab.id)}>{tab.name}</span>
           </Link>
         ))}
