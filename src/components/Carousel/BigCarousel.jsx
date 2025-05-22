@@ -25,7 +25,7 @@ function BigCarousel({activeIndex,setActiveIndex,cards}) {
                   className={`absolute inset-0 w-full h-full object-cover opacity-50 ${isMain ? "rounded-[25px]" : ""}`} />
                 <div className="relative z-10 flex flex-col justify-end h-full">
                   <div className={`flex gap-2 ${isMain ? "mb-4" : "mb-2"}`}>
-                    {card.tags.map((tag, idx) => (
+                    {card.tags?.map((tag, idx) => (
                       <span
                         key={idx}
                         className={`font-bold bg-blue-600 text-white px-2 py-0.5 rounded-[20px] ${isMain ? "text-[32px]" : "text-[24px]"}`} >
