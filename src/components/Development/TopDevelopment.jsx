@@ -37,7 +37,6 @@ function TopDevelopment() {
     { color: "blue", name: "MONTH " },
   ]
 
-  // Work section handlers
   const handleNext = () => {
     setActiveIndex((prev) =>
       prev === cards.length - 1 ? 0 : prev + 1
