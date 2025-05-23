@@ -8,18 +8,21 @@ function Top3dWork() {
   const cards = [
     {
       id: 1,
+      tags: ["3D"],
       title: "Flow UI Blueprint",
       description: "Modular UI screens for prototyping",
       image: "/assets/blueprints.png",
     },
     {
       id: 2,
+      tags: ["3D"],
       title: "8 Responsive UI Kit Updates",
       description: "UI Kit upgrades with mobile-first layouts.",
       image: "/assets/ui1.png",
     },
     {
       id: 3,
+      tags: ["3D"],
       title: "Kayening Web App UI",
       description: "Streamlined interface for Kayening's online platform.",
       image: "/assets/ui2.png",

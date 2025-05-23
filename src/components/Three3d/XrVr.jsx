@@ -8,24 +8,28 @@ function XrVr() {
   const cards = [
     {
       id: 1,
+      tags: ["AR/VR"],
       title: "Wireframes Kit for Startups",
       description: "Quick-start wireframe pack for new teams.",
       image: "/assets/wireframes.jpg",
     },
     {
       id: 2,
+      tags: ["AR/VR"],
       title: "Flow UI Blueprint",
       description: "Modular UI screens for prototyping",
       image: "/assets/blueprints.png",
     },
     {
       id: 3,
+      tags: ["AR/VR"],
       title: "Nova UX Patterns",
       description: "Modern design components for SaaS dashboards",
       image: "/assets/Ux.png",
     },
       {
       id: 4,
+      tags: ["AR/VR"],
       title: "Flow UI Blueprint",
       description: "Modular UI screens for prototyping",
       image: "/assets/blueprints.png",

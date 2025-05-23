@@ -8,24 +8,28 @@ function ProductPreview() {
   const cards = [
     {
       id: 1,
+      tags: ["PRODUCT PREVIEW"],
       title: "Wireframes Kit for Startups",
       description: "Quick-start wireframe pack for new teams.",
       image: "/assets/wireframes.jpg",
     },
     {
       id: 2,
+      tags: ["PRODUCT PREVIEW"],
       title: "Flow UI Blueprint",
       description: "Modular UI screens for prototyping",
       image: "/assets/blueprints.png",
     },
     {
       id: 3,
+      tags: ["PRODUCT PREVIEW"],
       title: "Nova UX Patterns",
       description: "Modern design components for SaaS dashboards",
       image: "/assets/Ux.png",
     },
       {
       id: 4,
+      tags: ["PRODUCT PREVIEW"],
       title: "Flow UI Blueprint",
       description: "Modular UI screens for prototyping",
       image: "/assets/blueprints.png",

@@ -8,24 +8,28 @@ function Three3danimation() {
   const cards = [
     {
       id: 1,
+      tags: ["3D ANIMATIONS"],
       title: "Wireframes Kit for Startups",
       description: "Quick-start wireframe pack for new teams.",
       image: "/assets/wireframes.jpg",
     },
     {
       id: 2,
+      tags: ["3D ANIMATIONS"],
       title: "Flow UI Blueprint",
       description: "Modular UI screens for prototyping",
       image: "/assets/blueprints.png",
     },
     {
       id: 3,
+      tags: ["3D ANIMATIONS"],
       title: "Nova UX Patterns",
       description: "Modern design components for SaaS dashboards",
       image: "/assets/Ux.png",
     },
      {
       id: 4,
+      tags: ["3D ANIMATIONS"],
       title: "Flow UI Blueprint",
       description: "Modular UI screens for prototyping",
       image: "/assets/blueprints.png",
