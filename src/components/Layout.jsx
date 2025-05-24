@@ -2,10 +2,10 @@ import React from 'react';
 import Navbar from './Navbar';
 import { Outlet } from 'react-router-dom';
 
-function Layout() {
+function Layout({isFrontPageRevealed,setisFrontPageRevealed}) {
   return (
     <div>
-      <Navbar />
+      <Navbar isFrontPageRevealed={isFrontPageRevealed} setisFrontPageRevealed={setisFrontPageRevealed}/>
       <Outlet />
     </div>
   );

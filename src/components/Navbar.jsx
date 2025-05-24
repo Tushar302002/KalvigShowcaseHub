@@ -1,16 +1,40 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { AiOutlineSearch } from "react-icons/ai";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
-function Navbar() {
+function Navbar({isFrontPageRevealed,setisFrontPageRevealed}) {
   const tabs = [
-    { id: '0', name: "All" , path : "/"},
-    { id: '1', name: "Design" , path : "/design"},
-    { id: '2', name: "3D" , path : "/3d"},
-    { id: '3', name: "Development" , path : "/development"},
-    { id: '4', name: "Case Studies" , path : "/casestudies"},
+    { id: '0', name: "All", path: "/" },
+    { id: '1', name: "Design", path: "/design" },
+    { id: '2', name: "3D", path: "/3d" },
+    { id: '3', name: "Development", path: "/development" },
+    { id: '4', name: "Case Studies", path: "/casestudies" },
   ];
-  const [activeTab, setActiveTab] = useState(0)
+  const location = useLocation();
+  
+  // Initialize from URL to avoid flash
+  const getTabIdFromPath = (path) => {
+    // Sort tabs by path length (longer first) to match nested paths properly
+    const sortedTabs = [...tabs].sort((a, b) => b.path.length - a.path.length);
+  
+    const match = sortedTabs.find(tab => {
+      if (tab.path === '/') {
+        return path === '/';
+      }
+      setisFrontPageRevealed(true)
+      return path.startsWith(tab.path);
+    });
+  
+    return match ? match.id : '0';
+  };
+
+  const [activeTab, setActiveTab] = useState(() => getTabIdFromPath(location.pathname));
+
+  // Update tab on route change (e.g. via Link navigation)
+  useEffect(() => {
+    setActiveTab(getTabIdFromPath(location.pathname));
+  }, [location.pathname]);
+
   function handleTabChange(tabID) {
     setActiveTab(tabID)
   }
