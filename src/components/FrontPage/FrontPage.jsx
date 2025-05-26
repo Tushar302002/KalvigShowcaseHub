@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { BiSolidRightArrow } from "react-icons/bi";
-import Home from '../pages/Home';
+import Home from '../../pages/Home';
 import gsap from 'gsap';
-import Navbar from './Navbar';
+import Navbar from '../Navbar/Navbar';
 
 
 function FrontPage({isFrontPageRevealed, setisFrontPageRevealed}) {

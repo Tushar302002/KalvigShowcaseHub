@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { AiOutlineSearch } from "react-icons/ai";
 import { Link, useLocation } from 'react-router-dom';
-import { useTransitionDirection } from '../TransitionContext';
+import { useTransitionDirection } from '../../context/TransitionContext';
 
 function Navbar({isFrontPageRevealed,setisFrontPageRevealed}) {
   const tabs = [

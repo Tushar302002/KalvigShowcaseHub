@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react';
-import Navbar from './Navbar';
+import Navbar from '../Navbar/Navbar';
 import { Outlet, useLocation } from 'react-router-dom';
 import gsap from 'gsap';
-import { useTransitionDirection } from '../TransitionContext';
+import { useTransitionDirection } from '../../context/TransitionContext';
 
 function Layout({ isFrontPageRevealed, setisFrontPageRevealed }) {
   const containerRef = useRef(null);
