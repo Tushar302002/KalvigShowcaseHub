@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { AiOutlineSearch } from "react-icons/ai";
 import { Link, useLocation } from 'react-router-dom';
+import { useTransitionDirection } from '../TransitionContext';
 
 function Navbar({isFrontPageRevealed,setisFrontPageRevealed}) {
   const tabs = [
@@ -11,6 +12,7 @@ function Navbar({isFrontPageRevealed,setisFrontPageRevealed}) {
     { id: '4', name: "Case Studies", path: "/casestudies" },
   ];
   const location = useLocation();
+  const { setDirection } = useTransitionDirection();
   
   // Initialize from URL to avoid flash
   const getTabIdFromPath = (path) => {
@@ -36,6 +38,14 @@ function Navbar({isFrontPageRevealed,setisFrontPageRevealed}) {
   }, [location.pathname]);
 
   function handleTabChange(tabID) {
+    const newIndex = parseInt(tabID, 10);
+    const currentIndex = parseInt(activeTab, 10);
+
+    if (newIndex > currentIndex) {
+      setDirection('right');
+    } else if (newIndex < currentIndex) {
+      setDirection('left');
+    }
     setActiveTab(tabID)
   }
 
