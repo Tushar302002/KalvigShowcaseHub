@@ -1,9 +1,9 @@
 import React, { act, useState } from 'react'
 import CarouselHeader from '../Carousel/CarouselHeader';
 import SmallCarousel from '../Carousel/SmallCarousel';
+import useCarousel from '../../hooks/useCarousel';
 
 function CaseStudies() {
-  const [activeIndex, setActiveIndex] = useState(0);
   const cards = [
     {
       title: "Royal Enfield’s Scram 411 3D Guide0",
@@ -36,17 +36,7 @@ function CaseStudies() {
     { color: "blue", name: "STUDIES " }
   ]
 
-  const handleNext = () => {
-    if (activeIndex < cards.length - 4) {
-      setActiveIndex(activeIndex + 1);
-    }
-  };
-
-  const handlePrev = () => {
-    if (activeIndex > 0) {
-      setActiveIndex(activeIndex - 1);
-    }
-  };
+  const { activeIndex, setActiveIndex, handleNext, handlePrev } = useCarousel(cards.length, false, 4);
 
   return (
     <section className="px-6 py-6 text-white ">

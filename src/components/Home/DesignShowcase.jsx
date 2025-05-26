@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import MediumCarousel from '../Carousel/MediumCarousel';
 import CarouselIndicators from '../Carousel/CarouselIndicators';
 import CarouselHeader from '../Carousel/CarouselHeader';
+import useCarousel from '../../hooks/useCarousel';
 
 function DesignShowcase() {
 
-  const [activeIndex, setActiveIndex] = useState(0);
   const cards = [
     {
       id: 1,
@@ -42,18 +42,7 @@ function DesignShowcase() {
     { color: "blue", name: "SHOWCASE " }
   ]
 
-  // Work section handlers
-  const handleNext = () => {
-    setActiveIndex((prev) =>
-      prev === cards.length - 1 ? 0 : prev + 1
-    );
-  };
-
-  const handlePrev = () => {
-    setActiveIndex((prev) =>
-      prev === 0 ? cards.length - 1 : prev - 1
-    );
-  };
+  const { activeIndex, setActiveIndex, handleNext, handlePrev } = useCarousel(cards.length);
 
 
   return (
@@ -62,7 +51,7 @@ function DesignShowcase() {
       <CarouselHeader handlePrev={handlePrev} handleNext={handleNext} carouselTitle={carouselTitle} />
 
       {/* Cards Container */}
-      <MediumCarousel activeIndex={activeIndex} setActiveIndex={setActiveIndex} cards={cards} mainCardIndex={1}/>
+      <MediumCarousel activeIndex={activeIndex} setActiveIndex={setActiveIndex} cards={cards} mainCardIndex={1} />
 
       {/* Indicators */}
       <CarouselIndicators activeIndex={activeIndex} setActiveIndex={setActiveIndex} cards={cards} />

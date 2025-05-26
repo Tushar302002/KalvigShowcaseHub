@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 import CarouselHeader from '../Carousel/CarouselHeader';
 import MediumCarousel from '../Carousel/MediumCarousel';
 import CarouselIndicators from '../Carousel/CarouselIndicators';
+import useCarousel from '../../hooks/useCarousel';
+
 
 function BrandingAndIdentity() {
-  const [activeIndex, setActiveIndex] = useState(0);
   const cards = [
     {
       id: 1,
@@ -27,7 +28,7 @@ function BrandingAndIdentity() {
       description: "Modern design components for SaaS dashboards",
       image: "/assets/Ux.png",
     },
-      {
+    {
       id: 4,
       tags: ["DESIGN", "UI/UX"],
       title: "Flow UI Blueprint",
@@ -42,25 +43,16 @@ function BrandingAndIdentity() {
     { color: "blue", name: "IDENTITY  " },
   ]
 
-  // Work section handlers
-  const handleNext = () => {
-    setActiveIndex((prev) =>
-      prev === cards.length - 1 ? 0 : prev + 1
-    );
-  };
 
-  const handlePrev = () => {
-    setActiveIndex((prev) =>
-      prev === 0 ? cards.length - 1 : prev - 1
-    );
-  };
+  const { activeIndex, setActiveIndex, handleNext, handlePrev } = useCarousel(cards.length);
+
   return (
     <section className="px-6 py-6 text-white">
       {/* Top title + arrows */}
       <CarouselHeader handlePrev={handlePrev} handleNext={handleNext} carouselTitle={carouselTitle} />
 
       {/* Cards Container */}
-      <MediumCarousel activeIndex={activeIndex} setActiveIndex={setActiveIndex} cards={cards} mainCardIndex={1}/>
+      <MediumCarousel activeIndex={activeIndex} setActiveIndex={setActiveIndex} cards={cards} mainCardIndex={1} />
 
       {/* Indicators */}
       <CarouselIndicators activeIndex={activeIndex} setActiveIndex={setActiveIndex} cards={cards} />

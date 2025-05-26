@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import CarouselHeader from '../Carousel/CarouselHeader';
 import BigCarousel from '../Carousel/BigCarousel';
 import CarouselIndicators from '../Carousel/CarouselIndicators';
+import useCarousel from '../../hooks/useCarousel';
 
 function Top3dWork() {
-  const [activeIndex, setActiveIndex] = useState(0);
   const cards = [
     {
       id: 1,
@@ -43,18 +43,9 @@ function Top3dWork() {
     { color: "blue", name: "MONTH " },
   ]
 
-  // Work section handlers
-  const handleNext = () => {
-    setActiveIndex((prev) =>
-      prev === cards.length - 1 ? 0 : prev + 1
-    );
-  };
 
-  const handlePrev = () => {
-    setActiveIndex((prev) =>
-      prev === 0 ? cards.length - 1 : prev - 1
-    );
-  };
+  const { activeIndex, setActiveIndex, handleNext, handlePrev } = useCarousel(cards.length);
+
   return (
     <section className="px-6 py-6 text-white">
       {/* Top title + arrows */}
