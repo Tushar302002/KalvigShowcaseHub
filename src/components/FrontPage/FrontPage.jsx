@@ -3,15 +3,18 @@ import { BiSolidRightArrow } from "react-icons/bi";
 import Home from '../../pages/Home';
 import gsap from 'gsap';
 import Navbar from '../Navbar/Navbar';
+import { useFrontPageReveal } from '../../context/FrontPageContext';
 
 
-function FrontPage({isFrontPageRevealed, setisFrontPageRevealed}) {
+
+function FrontPage() {
     const [coords, setCoords] = useState({ x: -9999, y: -9999 });
     const [disableHoverMask, setDisableHoverMask] = useState(false);
     const [isExploreButtonClicked, setisExploreButtonClicked] = useState(false);
     const [clickCoords, setClickCoords] = useState({ x: 0, y: 0 });
     const maskRef = useRef(null);
     const containerRef = useRef(null);
+    const { onFrontPage,setOnFrontPage }=useFrontPageReveal()
 
     // Hover mask movement
     useEffect(() => {
@@ -34,7 +37,7 @@ function FrontPage({isFrontPageRevealed, setisFrontPageRevealed}) {
             });
             setTimeout(() => {
                 maskRef.current.style.display="none";
-                setisFrontPageRevealed(true)
+                setOnFrontPage(false)
             }, 300);
             
         }
@@ -96,10 +99,10 @@ function FrontPage({isFrontPageRevealed, setisFrontPageRevealed}) {
 
 
     return (
-        <div className={`${(isFrontPageRevealed || isExploreButtonClicked)?"h-full":"h-[100vh]"} overflow-hidden relative`}>
+        <div className={`${(!onFrontPage || isExploreButtonClicked)?"h-full":"h-[100vh]"} overflow-hidden relative`}>
             <div
                 ref={maskRef}
-                className={`absolute z-20 w-full h-full ${isFrontPageRevealed?"hidden":""}`}
+                className={`absolute z-20 w-full h-full ${!onFrontPage?"hidden":""}`}
                 style={{ ...maskStyle, ...maskEffect }}
             >
                 <div className="w-full h-full flex flex-col items-center justify-center front-page">
@@ -121,7 +124,7 @@ function FrontPage({isFrontPageRevealed, setisFrontPageRevealed}) {
                     </div>
                 </div>
             </div>
-            {(isExploreButtonClicked || isFrontPageRevealed) && <Navbar isFrontPageRevealed={isFrontPageRevealed} setisFrontPageRevealed={setisFrontPageRevealed}/>}
+            {(isExploreButtonClicked || !onFrontPage) && <Navbar onFrontPage={onFrontPage} setOnFrontPage={setOnFrontPage}/>}
             <div ref={containerRef}>
                 <Home className="absolute z-10 w-full h-full" />
             </div>

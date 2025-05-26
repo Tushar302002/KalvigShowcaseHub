@@ -1,5 +1,4 @@
 // AppRouter.jsx
-import { useState } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import Layout from '../components/Layout/Layout';
@@ -11,16 +10,15 @@ import CaseStudies from '../pages/CaseStudies.jsx';
 import FrontPage from '../components/FrontPage/FrontPage.jsx';
 
 function AppRouter() {
-  const [isFrontPageRevealed, setisFrontPageRevealed] = useState(false);
 
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <FrontPage isFrontPageRevealed={isFrontPageRevealed} setisFrontPageRevealed={setisFrontPageRevealed} />
+      element: <FrontPage  />
     },
     {
       path: '/',
-      element: <Layout isFrontPageRevealed={isFrontPageRevealed} setisFrontPageRevealed={setisFrontPageRevealed}/>,
+      element: <Layout />,
       children: [
         { path: 'design', element: <Design /> },
         { path: '3d', element: <Three3D /> },

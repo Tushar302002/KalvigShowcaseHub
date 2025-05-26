@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react'
 import { AiOutlineSearch } from "react-icons/ai";
 import { Link, useLocation } from 'react-router-dom';
 import { useTransitionDirection } from '../../context/TransitionContext';
+import { useFrontPageReveal } from '../../context/FrontPageContext';
 
-function Navbar({isFrontPageRevealed,setisFrontPageRevealed}) {
+
+function Navbar() {
   const tabs = [
     { id: '0', name: "All", path: "/" },
     { id: '1', name: "Design", path: "/design" },
@@ -13,6 +15,7 @@ function Navbar({isFrontPageRevealed,setisFrontPageRevealed}) {
   ];
   const location = useLocation();
   const { setDirection } = useTransitionDirection();
+  const { setOnFrontPage }=useFrontPageReveal()
   
   // Initialize from URL to avoid flash
   const getTabIdFromPath = (path) => {
@@ -23,7 +26,7 @@ function Navbar({isFrontPageRevealed,setisFrontPageRevealed}) {
       if (tab.path === '/') {
         return path === '/';
       }
-      setisFrontPageRevealed(true)
+      setOnFrontPage(false)
       return path.startsWith(tab.path);
     });
   

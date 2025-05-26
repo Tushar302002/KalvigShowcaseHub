@@ -4,7 +4,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 import gsap from 'gsap';
 import { useTransitionDirection } from '../../context/TransitionContext';
 
-function Layout({ isFrontPageRevealed, setisFrontPageRevealed }) {
+function Layout() {
   const containerRef = useRef(null);
   const location = useLocation();
   const { direction } = useTransitionDirection();
@@ -29,7 +29,7 @@ function Layout({ isFrontPageRevealed, setisFrontPageRevealed }) {
 
   return (
     <div>
-      <Navbar isFrontPageRevealed={isFrontPageRevealed} setisFrontPageRevealed={setisFrontPageRevealed} />
+      <Navbar />
       <div ref={containerRef}>
         <Outlet />
       </div>
