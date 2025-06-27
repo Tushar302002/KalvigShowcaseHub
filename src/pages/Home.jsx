@@ -23,7 +23,7 @@ function Home() {
       {/* 3D VISUALS AND DEVELOPMENT SECTION */}
       <Three3D_And_Development />
 
-      <SectionDivision_Version2 />
+      <SectionDivision_Version1 />
 
       {/* CASE STUDY SECTION */}
       <CaseStudies />

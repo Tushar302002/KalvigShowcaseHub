@@ -16,7 +16,7 @@ function TopWork() {
     {
       id: 2,
       tags: ["DESIGN", "UI/UX"],
-      title: "8 Responsive UI Kit Updates",
+      title: "Responsive UI Kit Updates",
       description: "UI Kit upgrades with mobile-first layouts.",
       image: "/assets/ui1.png",
     },
@@ -26,14 +26,7 @@ function TopWork() {
       title: "Kayening Web App UI",
       description: "Streamlined interface for Kayening's online platform.",
       image: "/assets/ui2.png",
-    },
-    {
-      id: 4,
-      tags: ["DEVELOPMENT", "API"],
-      title: "Payment Gateway API",
-      description: "Secure payment processing integration",
-      image: "/assets/lipstic.png",
-    },
+    }
   ];
   const carouselTitle = [
     { color: "white", name: "TOP " },

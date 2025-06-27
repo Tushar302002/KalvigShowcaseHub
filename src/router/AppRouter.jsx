@@ -8,7 +8,7 @@ import Three3D from '../pages/Three3D.jsx';
 import Development from '../pages/Development.jsx';
 import CaseStudies from '../pages/CaseStudies.jsx';
 import FrontPage from '../components/FrontPage/FrontPage.jsx';
-
+import DescriptionPage from '../components/DescriptionPage/DescriptionPage.jsx';
 function AppRouter() {
 
   const router = createBrowserRouter([
@@ -24,6 +24,7 @@ function AppRouter() {
         { path: '3d', element: <Three3D /> },
         { path: 'development', element: <Development /> },
         { path: 'casestudies', element: <CaseStudies /> },
+        { path: 'description', element: <DescriptionPage /> },
       ],
     },
     { path: '*', element: <NotFoundPage /> },

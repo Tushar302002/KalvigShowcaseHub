@@ -1,12 +1,24 @@
 import React from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 function SmallCarousel({ activeIndex, cards }) {
+  const isMobile = useMediaQuery({ maxWidth: 767 }); // mobile screens
+  const isSmallScreen = useMediaQuery({ maxWidth: 1024 }); // sm and md
+
+  // Show 2 cards on mobile, 3 on small screens, 4 on large screens
+  const visibleCount = isMobile ? 2 : (isSmallScreen ? 3 : 4);
+  const visibleCards = cards.slice(activeIndex, activeIndex + visibleCount);
+
   return (
-    <div className="flex gap-4 overflow-hidden transition-all duration-300">
-      {cards.slice(activeIndex, activeIndex + 4).map((card, index) => (
+    <div className="flex gap-4 justify-between overflow-hidden transition-all duration-300">
+      {visibleCards.map((card, index) => (
         <div
           key={index}
-          className="min-w-[300px] h-[321px] rounded-[20px] overflow-hidden relative bg-black border-[1px]"
+          className={`
+            ${isMobile ? 'w-[54%] h-[250px]' : 'sm:w-1/2 md:w-1/3 md:h-[15rem] lg:w-1/3 xl:w-1/4'}
+            sm:h-[170.02px] lg:h-[15rem] xl:h-[20.0625rem] 
+            rounded-[1.25rem] overflow-hidden relative bg-black border-[1px]
+          `}
         >
           <img
             src={card.image}
@@ -15,17 +27,17 @@ function SmallCarousel({ activeIndex, cards }) {
           />
           <div className="absolute inset-0 p-4 flex flex-col justify-start text-white">
             <div className="flex flex-col gap-3">
-              <span className="bg-blue-600 text-white text-[20px] font-bold px-3 py-1 rounded-full w-fit">
+              <span className="bg-blue-600 text-white text-[10px] sm:text-[12.71px] lg:text-[1rem] xl:text-[1.25rem] font-bold px-[0.75rem] py-[0.25rem] rounded-full w-fit">
                 CASE STUDY
               </span>
-              <h3 className="text-[24px] font-bold w-[261px]">
+              <h3 className=" text-[13px] sm:text-[15.36px] lg:text-[1rem] xl:text-[1.5rem] font-bold w-[99%]">
                 {card.title}
               </h3>
             </div>
 
             <div className="flex-grow" />
 
-            <p className="text-gray-200 text-[18px] leading-snug w-[261px]">
+            <p className="text-gray-200 text-[10px] sm:text-[10.61px] lg:text-[1rem] xl:text-[1.125rem] leading-snug w-[100%]">
               {card.description}
             </p>
           </div>
