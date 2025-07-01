@@ -1,7 +1,12 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 function DescriptionPage() {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="flex flex-col">
@@ -80,7 +85,7 @@ function DescriptionPage() {
                   <div className="w-[60px] h-[60px] sm:w-[80px] sm:h-[80px]  md:w-[100px] md:h-[100px] lg:w-[126px] lg:h-[140px]  flex flex-col p-4 bg-[#101111] rounded-[18px] shadow-md hover:shadow-lg transition-shadow border">
                     <div className="h-[80%] sm:h-[70%] w-full mb-3 flex items-center justify-center">
                       <img
-                        src="public/assets/devicon_threejs.svg"
+                        src="/assets/devicon_threejs.svg"
                         alt="Three.js"
                         className="h-full w-full object-contain"
                       />
@@ -97,7 +102,7 @@ function DescriptionPage() {
                   <div className="w-[60px] h-[60px] sm:w-[80px] sm:h-[80px]  md:w-[100px] md:h-[100px] lg:w-[126px] lg:h-[140px]  flex flex-col p-4 bg-[#101111] rounded-[18px] shadow-md hover:shadow-lg transition-shadow border">
                     <div className="h-[80%] sm:h-[70%] w-full mb-3 flex items-center justify-center">
                       <img
-                        src="public/assets/material-icon-theme_react.svg"
+                        src="/assets/material-icon-theme_react.svg"
                         alt="React.js"
                         className="h-full w-full object-contain"
                       />
@@ -115,7 +120,7 @@ function DescriptionPage() {
           </div>
           <div className="w-1/2  xl:h-[1060px]">
             <img
-              src="public/assets/projectimg.png"
+              src="/assets/projectimg.png"
               alt=""
               className="h-[300px] sm:h-[500px] md:h-[600px] lg:h-[1000px] "
             />
