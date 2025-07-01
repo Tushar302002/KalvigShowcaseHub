@@ -47,3 +47,6 @@ body {
   linear-gradient(to bottom right, #0B1120, #0A0A0A);
   background-repeat: no-repeat;
 }
+.glow-button {
+  box-shadow: 0 0 10px #1ea1f2, 0 0 20px #1ea1f2, 0 0 30px #1ea1f2;
+}

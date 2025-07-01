@@ -1,5 +1,6 @@
 import React from 'react';
 import { useMediaQuery } from 'react-responsive';
+import { Link, useLocation } from 'react-router-dom';
 
 function SmallCarousel({ activeIndex, cards }) {
   const isMobile = useMediaQuery({ maxWidth: 767 }); // mobile screens
@@ -25,6 +26,7 @@ function SmallCarousel({ activeIndex, cards }) {
             alt={card.title}
             className="w-full h-full object-cover opacity-50"
           />
+          <Link to={`/description`} className="block h-full">
           <div className="absolute inset-0 p-4 flex flex-col justify-start text-white">
             <div className="flex flex-col gap-3">
               <span className="bg-blue-600 text-white text-[10px] sm:text-[12.71px] lg:text-[1rem] xl:text-[1.25rem] font-bold px-[0.75rem] py-[0.25rem] rounded-full w-fit">
@@ -41,6 +43,7 @@ function SmallCarousel({ activeIndex, cards }) {
               {card.description}
             </p>
           </div>
+          </Link>
         </div>
       ))}
     </div>

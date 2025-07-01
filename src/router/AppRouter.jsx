@@ -1,4 +1,3 @@
-// AppRouter.jsx
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import Layout from '../components/Layout/Layout';
@@ -9,12 +8,12 @@ import Development from '../pages/Development.jsx';
 import CaseStudies from '../pages/CaseStudies.jsx';
 import FrontPage from '../components/FrontPage/FrontPage.jsx';
 import DescriptionPage from '../components/DescriptionPage/DescriptionPage.jsx';
-function AppRouter() {
 
+function AppRouter() {
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <FrontPage  />
+      element: <FrontPage />
     },
     {
       path: '/',
@@ -24,10 +23,17 @@ function AppRouter() {
         { path: '3d', element: <Three3D /> },
         { path: 'development', element: <Development /> },
         { path: 'casestudies', element: <CaseStudies /> },
-        { path: 'description', element: <DescriptionPage /> },
       ],
     },
-    { path: '*', element: <NotFoundPage /> },
+    // DescriptionPage outside Layout so it doesn't show navbar
+    {
+      path: '/description',
+      element: <DescriptionPage />
+    },
+    {
+      path: '*',
+      element: <NotFoundPage />
+    },
   ]);
 
   return <RouterProvider router={router} />;
