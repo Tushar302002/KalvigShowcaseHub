@@ -310,7 +310,7 @@ function DescriptionPage() {
             </div>
 
             {/* Timeline Items */}
-            <div className="  md:space-y-[5rem] lg:space-y-[4rem] xl:space-y-[10rem]">
+            <div className="  md:space-y-[5rem] lg:space-y-[4rem] xl:space-y-[7rem]">
               {/* Item 1 - Left */}
               <div className="flex justify-between items-start w-full ">
                 <div className="w-1/2 pr-8 text-right">
@@ -319,7 +319,7 @@ function DescriptionPage() {
                     <img
                       src="/assets/mingcute_search-fill.svg"
                       alt="searchcicon"
-                      className="w-[45px] md:w-[50px] md:h-[50px] lg:w-[100px] lg:h-[100px]"
+                      className="w-[45px] md:w-[50px] md:h-[50px] lg:w-[70px] lg:h-[70px]"
                     />
                   </div>
                   <p className="text-blue-400  md:text-[45px] lg:text-[55px] xl:text-[60px] font-bold mb-2">
@@ -343,13 +343,13 @@ function DescriptionPage() {
                   {/* Icon Placeholder */}
                   <div className="flex justify-start mb-2 text-blue-400">
                     <img
-                      className="text-blue-400 w-[45px] md:w-[50px] md:h-[50px] lg:w-[100px] lg:h-[100px]"
+                      className="text-blue-400 w-[45px] md:w-[50px] md:h-[50px] lg:w-[70px] lg:h-[70px]"
                       src="/assets/el_idea.svg"
                       alt="searchcicon"
                     />
                   </div>
                   <p className="text-blue-400  md:text-[45px] lg:text-[55px]  xl:text-[60px] font-bold mb-2">
-                    step 2
+                    Step 2
                   </p>
                   <ul className="list-none text-gray-300 space-y-1 text-[10px] md:text-[15px] lg:text-[1rem]">
                     <li>Prototyping</li>
@@ -366,11 +366,11 @@ function DescriptionPage() {
                     <img
                       src="/assets/game-icons_gears.svg"
                       alt="searchcicon"
-                      className="w-[45px] md:w-[50px] md:h-[50px] lg:w-[100px] lg:h-[100px]"
+                      className="w-[45px] md:w-[50px] md:h-[50px] lg:w-[70px] lg:h-[70px]"
                     />
                   </div>
                   <p className="text-blue-400  md:text-[45px] lg:text-[55px]  xl:text-[60px] font-bold mb-2">
-                    step 3
+                    Step 3
                   </p>
                   <ul className="list-none text-gray-300 space-y-1 text-[10px] md:text-[15px]  lg:text-[1rem]">
                     <li>Assets Handoff</li>
@@ -391,11 +391,11 @@ function DescriptionPage() {
                     <img
                       src="/assets/solar_delivery-bold.svg"
                       alt="searchcicon"
-                      className="w-[45px] md:w-[50px] md:h-[50px] lg:w-[100px] lg:h-[100px]"
+                      className="w-[45px] md:w-[50px] md:h-[50px] lg:w-[70px] lg:h-[70px]"
                     />
                   </div>
                   <p className="text-blue-400 md:text-[45px] lg:text-[55px]  xl:text-[60px] font-bold mb-2">
-                    step 4
+                    Step 4
                   </p>
                   <ul className="list-none text-gray-300 text-[10px] md:text-[15px] space-y-1 xl:text-[1rem]">
                     <li>Project Wrap Up</li>
@@ -420,7 +420,7 @@ function DescriptionPage() {
           </h1>
         </div>
 
-        <div className=" p-8 w-[80%] rounded-[25px] border border-gray-700  text-white shadow-lg">
+        <div className=" p-8 w-[70%] rounded-[25px] border border-gray-700  text-white shadow-lg">
           {/* Top Section */}
           <div className="flex items-center space-x-4 mb-4">
             <div className="  w-[70px] sm:h-[100px] sm:w-[100px] lg:w-[150px] lg:h-[150px] bg-gray-600 rounded-full flex items-center justify-center">
@@ -457,7 +457,7 @@ function DescriptionPage() {
         </div>
 
         <button
-          className="px-2 py-3 mt-[5rem] mb-[5rem] lg:mt-[10rem] lg:mb-[10rem] w-[160px] h-[60px] sm:w-[250px] sm:text-[20px] md:w-[300px] md:text-[25px] lg:w-[400px] xl:w-[465px] lg:text-[30px] xl:text-[40px]  bg-[#1EA1F2] text-white font-semibold rounded-[25px] shadow-lg 
+          className="px-2 py-3 mt-[5rem] mb-[5rem] lg:mt-[10rem] lg:mb-[10rem] w-[160px] h-[60px] sm:h-[85px] sm:w-[250px] sm:text-[20px] md:w-[300px] md:text-[25px] lg:w-[400px] xl:w-[465px] lg:text-[30px] xl:text-[40px]  bg-[#1EA1F2] text-white font-semibold rounded-[25px] shadow-lg 
                      hover:brightness-110 transition-all duration-300
                      text-xs tracking-wide
                      glow-button"
